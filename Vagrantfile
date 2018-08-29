@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
 #  config.vm.define "node4"
 
   config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "playbooks/playbook.yaml"
+    ansible.playbook = "ansible/site.yml"
     ansible.groups = {
       "EtcdServers" => ["node1"],
       "ControllerServers" => ["Controller1"],
