@@ -1,0 +1,17 @@
+---
+
+- name: Apply general configuration parameters to all hosts
+  hosts: all
+  remote_user: root
+
+- name: Apply configuration for Etcd Servers
+  hosts: EtcdServers
+  remmote_user: root
+
+- name: Apply configuration for Controller Servers
+  hosts: ControllerServers
+  remote_user: root
+
+- name: Apply configuation to Worker Servers
+  hosts: WorkerServers
+  remote_user: root
