@@ -1,0 +1,15 @@
+---
+ - name: Install ntpd
+   hosts: host.name.ip 
+   become: true
+
+   tasks:
+   - name: Install ntpd
+     yum:
+       name: ntpd
+       state: present
+
+   - name: Start  ntpd
+     service:
+       name: ntpd
+       state: started
